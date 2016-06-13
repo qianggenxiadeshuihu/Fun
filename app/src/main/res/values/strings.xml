@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Fun</string>
     <string name="join_to_have_fun">Join to have fun</string>
+    <string name="main_page_toast">Welcome</string>
 </resources>

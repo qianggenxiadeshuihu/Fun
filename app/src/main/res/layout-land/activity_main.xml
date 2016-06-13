@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    style="@style/Animation.AppCompat.Dialog"
+    android:gravity="top">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:text="@string/join_to_have_fun"
+        android:id="@+id/title"
+        android:background="#c9f6ac"
+        android:textColor="#da0d0d"
+        android:contextClickable="false"
+        android:textSize="@dimen/abc_text_size_display_2_material"
+        android:textAlignment="center" />
+
+
+</LinearLayout>
