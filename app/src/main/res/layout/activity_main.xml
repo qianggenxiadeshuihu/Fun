@@ -12,9 +12,9 @@
         android:text="@string/join_to_have_fun"
         android:id="@+id/title"
         android:background="#c9f6ac"
-        android:textColor="#da0d0d"
+        android:textColor="#330dda"
         android:contextClickable="false"
-        android:textSize="@dimen/abc_text_size_display_2_material"
+        android:textSize="30sp"
         android:textAlignment="center"
         android:layout_gravity="top"
         android:layout_weight="1" />
@@ -31,7 +31,7 @@
             android:layout_width="0dp"
             android:layout_weight="0.3"
             android:layout_height="wrap_content"
-            android:text="Account"
+            android:text="@string/Account"
             android:id="@+id/textView"
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
@@ -59,7 +59,7 @@
             android:layout_width="0dp"
             android:layout_weight="0.3"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="@string/Password"
             android:id="@+id/textView2"
             android:textSize="20dp"
             android:layout_marginLeft="10dp"
@@ -75,5 +75,11 @@
             android:textAlignment="center" />
     </LinearLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/Entrance"
+        android:id="@+id/quick_enter"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
