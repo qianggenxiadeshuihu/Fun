@@ -1,18 +1,41 @@
 package com.jiayi.fun;
 
 import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.app.Activity;
 
 
-public class PaintingActivity extends Activity {
+public class PaintingActivity extends Activity implements SensorEventListener{
 
-    public Vibrator vib_instance;
+    private Vibrator vib_instance;
     private boolean flag = false;
+    private SensorManager sensorManager;
+    private Sensor accel_sensor;
+    private EditText accel_value;
+    private Button get_accel;
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+//            Toast.makeText(PaintingActivity.this, event.values[0] + "  " + event.values[1] + "  " + event.values[2] + "  ", Toast.LENGTH_SHORT).show();
+        accel_value.setText(String.format("%f  %f  %f", event.values[0], event.values[1], event.values[2]));
+//            Log.d("fun_value", String.format("%f  %f  %f", event.values[0], event.values[1], event.values[2]));
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        Toast.makeText(PaintingActivity.this, "onAccuracyChanged", Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +56,15 @@ public class PaintingActivity extends Activity {
                 }
             }
         });
-    }
 
+        get_accel = (Button)findViewById(R.id.show_accel);
+        accel_value = (EditText)findViewById(R.id.accel_value);
+
+        sensorManager = (SensorManager)getApplicationContext().getSystemService(Context.SENSOR_SERVICE);
+        accel_sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+
+
+        sensorManager.registerListener(this, accel_sensor, 1000000);
+
+    }
 }

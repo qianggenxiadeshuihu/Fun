@@ -7,5 +7,6 @@
     <string name="main_page_toast">Welcome</string>
 
     <string name="Vibration">Vibration</string>
+    <string name="Accelerator">Accelerator</string>
 
 </resources>
