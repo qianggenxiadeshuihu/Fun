@@ -33,5 +33,20 @@ public class MainActivity extends Activity {
                 }
             }
         });
+
+        Button quick_enter_roi = (Button)findViewById(R.id.enter_roi);
+        quick_enter_roi.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.jiayi.fun.ROI");
+
+//                Intent intent = new Intent(MainActivity.this, PaintingActivity.class);
+                if (intent.equals(null)) {
+                    Log.e("fun", "intent not valid");
+                } else {
+                    startActivity(intent);
+                }
+            }
+        });
     }
 }

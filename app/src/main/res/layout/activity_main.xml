@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="@string/Account"
             android:id="@+id/textView"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
 
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:id="@+id/editText"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:text="@string/Password"
             android:id="@+id/textView2"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
 
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:id="@+id/editText2"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -82,4 +82,10 @@
         android:id="@+id/quick_enter"
         android:layout_gravity="center_horizontal" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/quick_enter_roi"
+        android:id="@+id/enter_roi"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

@@ -9,4 +9,15 @@
     <string name="Vibration">Vibration</string>
     <string name="Accelerator">Accelerator</string>
 
+    <string name="show_next_roi">Next</string>
+    <string name="show_prev_roi">Prev</string>
+
+    <string name="default_table_row">0 0 0 0 0 0 0</string>
+
+    <string name="quick_enter_roi">ROI</string>
+
+    <string name="TP_data_dir">Input dir of data</string>
+    <string name="record_dir">Prefix of data</string>
+
+
 </resources>

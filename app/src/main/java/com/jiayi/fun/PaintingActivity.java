@@ -15,7 +15,7 @@ import android.widget.Toast;
 import android.app.Activity;
 
 
-public class PaintingActivity extends Activity implements SensorEventListener{
+public class PaintingActivity extends Activity{
 
     private Vibrator vib_instance;
     private boolean flag = false;
@@ -23,18 +23,19 @@ public class PaintingActivity extends Activity implements SensorEventListener{
     private Sensor accel_sensor;
     private EditText accel_value;
     private Button get_accel;
-
-    @Override
-    public void onSensorChanged(SensorEvent event) {
+    private SensorEventListener sensorEventListener = new SensorEventListener() {
+        @Override
+        public void onSensorChanged(SensorEvent event) {
 //            Toast.makeText(PaintingActivity.this, event.values[0] + "  " + event.values[1] + "  " + event.values[2] + "  ", Toast.LENGTH_SHORT).show();
-        accel_value.setText(String.format("%f  %f  %f", event.values[0], event.values[1], event.values[2]));
+            accel_value.setText(String.format("%f  %f  %f", event.values[0], event.values[1], event.values[2]));
 //            Log.d("fun_value", String.format("%f  %f  %f", event.values[0], event.values[1], event.values[2]));
-    }
+        }
 
-    @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        Toast.makeText(PaintingActivity.this, "onAccuracyChanged", Toast.LENGTH_SHORT).show();
-    }
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+            Toast.makeText(PaintingActivity.this, "onAccuracyChanged", Toast.LENGTH_SHORT).show();
+        }
+    };
 
 
     @Override
@@ -64,7 +65,7 @@ public class PaintingActivity extends Activity implements SensorEventListener{
         accel_sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
 
-        sensorManager.registerListener(this, accel_sensor, 1000000);
+        sensorManager.registerListener(sensorEventListener, accel_sensor, 1000000);
 
     }
 }
