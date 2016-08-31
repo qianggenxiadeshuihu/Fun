@@ -16,8 +16,17 @@
 
     <string name="quick_enter_roi">ROI</string>
 
+    <string name="quick_enter_but">Button</string>
+
     <string name="TP_data_dir">Input dir of data</string>
     <string name="record_dir">Prefix of data</string>
 
+    <!-- String for quick actions. -->
+    <string name="go_selfie">Take Selfie</string>
 
+    <!-- String for quick actions. -->
+    <string name="go_vedio">Record Vedio</string>
+
+    <!-- String for quick actions. -->
+    <string name="go_photo">Take Photo</string>
 </resources>

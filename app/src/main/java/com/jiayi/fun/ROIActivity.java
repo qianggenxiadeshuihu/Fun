@@ -1,11 +1,14 @@
 package com.jiayi.fun;
 
 import android.app.Activity;
+import android.media.Image;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -139,5 +142,7 @@ public class ROIActivity extends Activity {
                 show_roi(FRAME_NUMBER_START);
             }
         });
+
+
     }
 }

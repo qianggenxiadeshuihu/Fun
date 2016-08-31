@@ -124,10 +124,10 @@
                 android:text="@string/show_next_roi"
                 android:id="@+id/show_next_roi"
                 android:layout_weight="0.5"
+
                 android:layout_gravity="center_horizontal" />
         </TableRow>
     </TableLayout>
-
 
 </LinearLayout>
 

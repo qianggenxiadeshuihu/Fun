@@ -48,5 +48,19 @@ public class MainActivity extends Activity {
                 }
             }
         });
+
+        Button quick_enter_but = (Button)findViewById(R.id.enter_but);
+        quick_enter_but.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.jiayi.fun.BUTTON");
+
+                if (intent.equals(null)) {
+                    Log.e("fun", "intent not valid");
+                } else {
+                    startActivity(intent);
+                }
+            }
+        });
     }
 }

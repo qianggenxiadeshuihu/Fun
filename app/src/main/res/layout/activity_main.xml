@@ -88,4 +88,11 @@
         android:text="@string/quick_enter_roi"
         android:id="@+id/enter_roi"
         android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/quick_enter_but"
+        android:id="@+id/enter_but"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
